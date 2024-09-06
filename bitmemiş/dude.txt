@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+int ahbapBul(int);
+
+int main()
+{
+    int s;
+    printf("sayiyi girniz: ");
+    scanf("%d",&s);
+    printf("%d\n",ahbapBul(s));
+
+    return 0;
+}
+int ahbapBul(int s)
+{
+    int toplam=0,i,j,k,toplam2=0;
+    float oran,oran2;
+    for(i=1;i<=s;i++)
+
+        if(s%i==0)
+            toplam=toplam+i;
+     oran=toplam/s;
+     for(j=1;j<=s;j++)
+     {
+         for(k=1;k<=j;k++)
+            if(j%k==0)
+                toplam2=toplam2+k;
+
+     }
+     oran2=toplam2/j;
+     if(oran2==oran)
+        return j;
+
+
+
+}

@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+void asaliBul(int sayi,char kr)
+{
+
+    int j;
+
+
+    switch(kr)
+    {
+    case 'k':
+     j=sayi;
+        for(int k=2; k<j; k++)
+            {
+                if(j%k==0)
+                {
+                    k=2;
+                    j--;
+                }
+                 }
+
+        printf("%d sayisina en yakin ondan kucuk asal sayi %d dir",sayi,j);
+        break;
+
+    case 'b':
+     j=sayi;
+        for(int k=2; k<j; k++)
+            {
+                if(j%k==0)
+                {
+                    k=2;
+                    j++;
+                }
+                 }
+
+        printf("%d sayisina en yakin ondan buyuk asal sayi %d dir",sayi,j);
+
+       break;
+
+    }
+
+            }
+int main()
+{
+    int a;
+    char kr;
+    kr=' ';
+    printf("sayi giriniz:\n");
+    scanf("%d",&a);
+    printf("karakter giriniz:\n");
+    fflush(stdin);
+    scanf("%c",&kr);
+    asaliBul(a,kr);
+
+    return 0;
+}
